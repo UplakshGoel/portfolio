@@ -25,7 +25,7 @@ you'll find me exploring new technologies and contributing to open-source projec
   resumeUrl: '#',
   social: {
     github: 'https://github.com/UplakshGoel',
-    linkedin: 'https://www.linkedin.com/in/uplaksh-goel-3351b6329/',
+    linkedin: 'https://www.linkedin.com/in/uplaksh-goel/',
 
   },
   stats: [
