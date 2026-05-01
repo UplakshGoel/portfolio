@@ -4,7 +4,7 @@ import { projects } from '../data/placeholder';
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative">
+    <section id="projects" className="relative z-10">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyber-cyan/20 to-transparent" />
 
       <div className="section-container">

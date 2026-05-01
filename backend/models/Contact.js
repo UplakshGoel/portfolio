@@ -1,18 +1,27 @@
-// ============================================================
-// Contact Model — In-memory storage
-// Replace with Mongoose schema when MongoDB is connected.
-// ============================================================
+import mongoose from 'mongoose';
 
-const contacts = [];
+const contactSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, 'Name is required'],
+    trim: true,
+  },
+  email: {
+    type: String,
+    required: [true, 'Email is required'],
+    match: [/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Please provide a valid email address'],
+  },
+  message: {
+    type: String,
+    required: [true, 'Message is required'],
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
 
-export const createContact = (data) => {
-  const contact = {
-    id: String(contacts.length + 1),
-    ...data,
-    createdAt: new Date().toISOString(),
-  };
-  contacts.push(contact);
-  return contact;
-};
+const Contact = mongoose.model('Contact', contactSchema);
 
-export const getAllContacts = () => contacts;
+export default Contact;
+

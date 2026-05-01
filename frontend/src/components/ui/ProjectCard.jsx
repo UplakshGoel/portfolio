@@ -47,7 +47,7 @@ export default function ProjectCard({ project, index = 0 }) {
               />
             </svg>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 relative z-20 pointer-events-auto">
             {project.githubUrl && (
               <a
                 href={project.githubUrl}

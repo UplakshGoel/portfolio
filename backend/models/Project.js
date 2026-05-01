@@ -18,13 +18,13 @@
 const projects = [
   {
     id: '1',
-    title: 'Project Alpha',
+    title: 'SkillSwap',
     description:
-      'A full-stack web application built with React and Node.js featuring real-time data processing, interactive dashboards, and a responsive design system.',
-    techStack: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      'A skill based project matchmaking platform for students and professionals where they can find projects and team members according to their skills and interests using graph based database technology.',
+    techStack: ['React', 'Node.js', 'Neo4j', 'Tailwind CSS'],
     thumbnail: '',
-    githubUrl: 'https://github.com/yourusername/project-alpha',
-    liveUrl: 'https://project-alpha.demo.com',
+    githubUrl: 'https://github.com/UplakshGoel/SkillSwap',
+    liveUrl: 'https://skill-swap-project-team-finder.vercel.app/',
     featured: true,
   },
   {

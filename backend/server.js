@@ -9,6 +9,10 @@ import contactRoutes from './routes/contactRoutes.js';
 import skillRoutes from './routes/skillRoutes.js';
 
 dotenv.config();
+import connectDB from './config/db.js';
+
+// Connect to Database
+connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -44,8 +48,7 @@ app.use(errorHandler);
 
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
-    console.log(`\n🚀 Portfolio API running on http://localhost:${PORT}`);
-    console.log(`📦 Using placeholder data (MongoDB not connected)\n`);
+    console.log(`\n🚀 Portfolio API running on http://localhost:${PORT}\n`);
   });
 }
 

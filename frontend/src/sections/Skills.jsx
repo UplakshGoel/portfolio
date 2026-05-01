@@ -9,7 +9,7 @@ export default function Skills() {
   const categories = [...new Set(skills.map((s) => s.category))];
 
   return (
-    <section id="skills" className="relative">
+    <section id="skills" className="relative z-10">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyber-purple/20 to-transparent" />
 
       <div className="section-container">

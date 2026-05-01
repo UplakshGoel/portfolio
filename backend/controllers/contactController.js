@@ -1,7 +1,7 @@
-import { createContact } from '../models/Contact.js';
+import Contact from '../models/Contact.js';
 import { sendSuccess, sendError } from '../views/responseView.js';
 
-export const submitContact = (req, res) => {
+export const submitContact = async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
@@ -9,15 +9,18 @@ export const submitContact = (req, res) => {
       return sendError(res, 400, 'Name, email, and message are all required');
     }
 
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return sendError(res, 400, 'Please provide a valid email address');
-    }
-
-    const contact = createContact({ name, email, message });
+    const contact = await Contact.create({ name, email, message });
+    
     sendSuccess(res, contact, 'Message sent successfully!', 201);
   } catch (error) {
+    console.error('Submit Contact Error:', error);
+    
+    if (error.name === 'ValidationError') {
+      const messages = Object.values(error.errors).map(val => val.message);
+      return sendError(res, 400, messages.join(', '));
+    }
+    
     sendError(res, 500, 'Failed to send message');
   }
 };
+

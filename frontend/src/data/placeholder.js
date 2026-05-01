@@ -15,7 +15,7 @@ export const personalInfo = {
     'Database Architect',
     'UI/UX Thinker',
   ],
-  email: 'goeluplaksh@example.com',
+  email: 'goeluplaksh@gmail.com',
   phone: '+919027554150',
   location: 'Greater Noida, India',
   bio: `I'm a passionate full-stack developer who loves building scalable web applications
@@ -52,12 +52,12 @@ export const skills = [
 export const projects = [
   {
     id: '1',
-    title: 'Project Alpha',
+    title: 'SkillSwap',
     description:
-      'A full-stack web application built with React and Node.js featuring real-time data processing, interactive dashboards, and a responsive design system.',
-    techStack: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/yourusername/project-alpha',
-    liveUrl: 'https://project-alpha.demo.com',
+      'A skill based project matchmaking platform for students and professionals where they can find projects and team members according to their skills and interests using graph based database technology.',
+    techStack: ['React', 'Node.js', 'Neo4j', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/UplakshGoel/SkillSwap',
+    liveUrl: 'https://skill-swap-project-team-finder.vercel.app/',
     featured: true,
   },
   {
